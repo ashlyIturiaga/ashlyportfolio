@@ -1,38 +1,356 @@
+
+@import url(https://unpkg.com/aos@2.3.1/dist/aos.css);
+@import url(https://fonts.googleapis.com/css2?family=Michroma&display=swap);
+
+
+.App, body {
+  font-family:'Michroma', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set the GIF as the background for the entire app */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Michroma', sans-serif;
+  background:#0F0017;
+  background-size: cover;
+}
+
+/* Ensure content is readable by giving it a background and styling */
 .App {
-  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: white; /* Change color to ensure visibility over the GIF */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header, section, footer {
+  padding: 5rem;
+}
+header{
+display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the left */
+  margin-left: 60px; /* Add padding to the left */
+} 
+
+.image-holder div {
+  width: 80%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.image-holder img {
+  width: 100%;
+
+}
+
+header h1 {
+  font-size:5rem;
+  text-align: left;
+  color: #c353ff;
+  padding-left:50%;
+
+}
+
+header p {
+  font-size: 1rem;
+  font-family: 'Michroma',sans-serif;
+ text-align: left;
+ padding-left: 10%;
+
+}
+.landing{
+align-items: center;
+  gap: 50px; /* Adjust spacing between text and image */
+  text-align: left;
+  
+
+}
+
+  .Nameko{
+   
+    padding-left: 10%;
+
   }
+.Nameko p{
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: left;
+  padding-left: 10%;
+}
+.Nameko h1{
+  font-size:5rem;
+  text-align: left;
+  color: #c353ff;
+  padding-left:10%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.skills-container{
+ 
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  padding: 5rem;
+}
+.skills-container h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+.projects {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.projects-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project {
+  width: 100%;
+}
+
+.project img {
+  width: 100%;
+}
+
+.project a {
+  background-color: #0b0c10;
+  color: #c766fc;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.project a:hover {
+  background-color: #555;
+}
+
+
+/* Footer Links */
+.contact h2{
+  font-size: xx-large;
+  text-align: center;
+}
+.contact a {
+  color: #333;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+.contact p{
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  }
+
+.contact a:hover {
+  text-decoration: underline;
+  text-align: center;
+
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.contact a:hover {
+  text-align: center;
+
+  color: #cf7dfc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Footer Styles */
+.footer {
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-links a:hover {
+  color: #cf7dfc;
+}
+
+.social-links a svg {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+@media (max-width: 600px) {
+  section, header, footer {
+    padding: 2rem 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  header {
+    line-height: 1.2;
+
   }
+}
+
+@media (min-width: 601px) {
+
+  .logo{
+    gap: 20%;
+   }
+  h2 {
+    font-size: 4rem;
+  }
+  .image-holder {
+    width: 30%;
+    padding-left: 65%;
+    margin-top: 5rem;
+  }
+  .Nameko{
+    margin-top: -25rem;
+    ;
+  }
+ 
+  header {
+    line-height: 0.5;
+    align-content: baseline;
+  
+    
+  }
+  
+
+  header p {
+    font-size: 3rem;
+  }
+  .image-holder-ashly{
+    position: fixed;
+    padding-left: 5%;
+  }
+  .about{
+  
+    background: linear-gradient(0deg, rgba(98,0,238,1) 0%, rgba(55,0,126,1) 33%, rgba(28,0,57,1) 63%, rgba(15,0,23,1) 100%);
+    margin-top: 20rem;
+ 
+    padding-bottom: 10%;
+  }
+  .about h2 {
+    text-align: center;
+   
+  }
+
+  .about p {
+    font-size: 2rem;
+    text-align: left;
+    padding-left: 40%;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    width: 70%;
+  }
+
+  .contact, .footer {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 800px) {
+
+  .project {
+    width: 35%;
+  }
+  
+  .project-list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .project {
+    /* Optional: Add border */
+   padding: 15px;
+   text-align: center;
+   font-size: 30px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transform and shadow */
+   cursor: pointer; /* Change cursor to pointer on hover */
+   /* Background color for the project box */
+   border-radius: 10px;
+ }
+ 
+ .project:hover {
+   transform: translateY(-10px); /* Lift the project box slightly upwards on hover */
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Add a shadow for depth on hover */
+ }
+ 
+ .project a {
+   display: inline-block;
+   margin-top: 0.5rem;
+   padding: 0.5rem 1rem;
+   background-color: #090909;
+   color:  #c766fc;
+   text-decoration: none;
+   border-radius: 5px;
+   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for button */
+ }
+ 
+ .project a:hover {
+   background-color:  #cf7dfc; /* Lighter color on hover */
+   color: #000; /* Darker text color on hover */
+ }
+ 
+ /* Adding subtle animations to project content */
+ .project img {
+   transition: transform 0.3s ease; /* Smooth image zoom effect */
+   padding-top: 2rem;
+ }
+ 
+ .project:hover img {
+   transform: scale(1.05); /* Slightly zoom in the image on hover */
+ }
+ 
+ /* Project Titles */
+ .project-title {
+   font-size: 40px; /* Adjust the font size for project titles */
+   font-weight: bold; /* Make the titles bold */
+   color: white; /* Optional: Change color to match your theme */
+   transition: color 0.3s ease; /* Smooth color transition */
+ }
+ 
+ .project:hover .project-title {
+   color:  #d283fc; /* Change color on hover */
+ }
+ 
+
+ .project-description {
+   font-size: 30px; 
+   color: white;
+   margin-bottom: 1rem; 
+   transition: color 0.3s ease; 
+ }
+ 
+ .project:hover .project-description {
+   color:  #d283fc; 
+ }
+
+
 }
